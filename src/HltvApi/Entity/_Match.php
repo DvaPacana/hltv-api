@@ -3,10 +3,10 @@ namespace HltvApi\Entity;
 
 
 /**
- * Class Match
+ * Class _Match
  * @package HltvApi\Entity
  */
-class Match extends Entity
+class _Match extends Entity
 {
 
     const STATUS_UPCOMING   = 1;
@@ -99,6 +99,6 @@ class Match extends Entity
      */
     public function details() : MatchDetails
     {
-        return $this->details ?? $this->details = $this->client->matchDetails($this->getMatchUrl());
+        return $this->details ?? $this->details = $this->client->MatchDetails($this->getMatchUrl());
     }
 }

@@ -3,7 +3,7 @@
 namespace HltvApi\Parsers;
 
 
-use HltvApi\Entity\Match;
+use HltvApi\Entity\_Match;
 use Sunra\PhpSimple\HtmlDomParser;
 
 /**
@@ -72,13 +72,13 @@ abstract class Parser
         $lt = null;
         switch ($type) {
             case 'bo5':
-                $lt = Match::TYPE_BO5;
+                $lt = _Match::TYPE_BO5;
                 break;
             case 'bo3':
-                $lt = Match::TYPE_BO3;
+                $lt = _Match::TYPE_BO3;
                 break;
             case 'bo2':
-                $lt = Match::TYPE_BO2;
+                $lt = _Match::TYPE_BO2;
                 break;
             case 'bo1':
             case 'mrg':
@@ -88,10 +88,10 @@ abstract class Parser
             case 'inf':
             case 'vtg':
             case 'ovp':
-                $lt = Match::TYPE_BO1;
+                $lt = _Match::TYPE_BO1;
                 break;
             default:
-                $lt = Match::TYPE_UNDEFINED;
+                $lt = _Match::TYPE_UNDEFINED;
                 break;
         }
 

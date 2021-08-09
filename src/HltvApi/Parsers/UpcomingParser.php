@@ -2,7 +2,7 @@
 namespace HltvApi\Parsers;
 
 
-use HltvApi\Entity\Match;
+use HltvApi\Entity\_Match;
 use simplehtmldom_1_5\simple_html_dom_node;
 
 /**
@@ -44,7 +44,7 @@ class UpcomingParser extends Parser
             $timestamp = ((int)$item->find('div.time', 0)->getAttribute('data-unix') / 1000);
             $append = [
                 'id' => $id,
-                'status' => Match::STATUS_UPCOMING,
+                'status' => _Match::STATUS_UPCOMING,
                 'team1' => $team1,
                 'team2' => $team2,
                 'url' => $url,

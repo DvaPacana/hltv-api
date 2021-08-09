@@ -5,7 +5,7 @@ namespace HltvApi\Entity;
  * Class MatchDetails
  * @package HltvApi\Entity
  */
-class MatchDetails extends Match
+class MatchDetails extends _Match
 {
 
     const IS_LIVE = 'LIVE';
