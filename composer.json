@@ -1,5 +1,5 @@
 {
-  "name": "webrepin/hltv-api",
+  "name": "dva-pacana/hltv-api",
   "description": "PHP Hltv API Client",
   "keywords": ["csgo","csgoapi", "api", "hltv", "hltv.org", "cs"],
   "type": "library",
