@@ -2,7 +2,7 @@
 namespace HltvApi\Parsers;
 
 
-use HltvApi\Entity\Match;
+use HltvApi\Entity\_Match;
 use simplehtmldom_1_5\simple_html_dom_node;
 
 /**
@@ -22,19 +22,19 @@ class OngoingParser extends Parser
         $lt = null;
         switch ($type) {
             case 'Best of 5':
-                $lt = Match::TYPE_BO5;
+                $lt = _Match::TYPE_BO5;
                 break;
             case 'Best of 3':
-                $lt = Match::TYPE_BO3;
+                $lt = _Match::TYPE_BO3;
                 break;
             case 'Best of 2':
-                $lt = Match::TYPE_BO2;
+                $lt = _Match::TYPE_BO2;
                 break;
             case 'Best of 1':
-                $lt = Match::TYPE_BO1;
+                $lt = _Match::TYPE_BO1;
                 break;
             default:
-                $lt = Match::TYPE_UNDEFINED;
+                $lt = _Match::TYPE_UNDEFINED;
             break;
         }
 
@@ -58,7 +58,7 @@ class OngoingParser extends Parser
             $team2 = trim($item->find('.teams .team-name', 1)->plaintext);
             $append = [
                 'id' => $id,
-                'status' => Match::STATUS_ONGOING,
+                'status' => _Match::STATUS_ONGOING,
                 'team1' => $team1,
                 'team2' => $team2,
                 'url' => $url,
